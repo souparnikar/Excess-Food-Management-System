@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Connect - Welcome</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,500;0,700;0,800;1,400;1,600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('img/index.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Dark overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            z-index: -1;
+        }
+
+        .logo {
+            padding-top: 30px;
+            font-size: 35px;
+            text-align: center;
+            color: white;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        .para {
+            text-align: center;
+            font-size: 30px;
+            margin-top: 10px;
+        }
+
+        .log {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .log a,
+        .options-container a {
+            width: 250px;
+            height: 50px;
+            background: rgba(6, 193, 103, 0.9);
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            transition: 0.3s;
+            margin-bottom: 15px;
+            backdrop-filter: blur(2px);
+        }
+
+        .log a:hover,
+        .options-container a:hover {
+            background: rgba(4, 161, 84, 0.95);
+            letter-spacing: 1px;
+        }
+
+        .options-container {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .admin-btn {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #FF5733;
+            padding: 10px 18px;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .admin-btn:hover {
+            background-color: #e04e2b;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .logo {
+                font-size: 30px;
+                padding: 20px;
+            }
+
+            .para {
+                font-size: 22px;
+            }
+
+            .log a,
+            .options-container a {
+                width: 200px;
+                height: 50px;
+                font-size: 16px;
+            }
+
+            .admin-btn {
+                bottom: 10px;
+                left: 10px;
+                font-size: 12px;
+                padding: 8px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <p class="logo"> Welcome to Food <b style="color: #06C167;">Connect</b></p>
+
+    <div class="log">
+        <a href="javascript:void(0);" onclick="showOptions()">Login</a>
+    </div>
+
+    <div class="options-container" id="optionsContainer">
+        <a href="login.php?type=individual">Individual</a>
+        <a href="login.php?type=community">Community Events</a>
+        <a href="login.php?type=hotel">Hotels/Parties</a>
+        <a href="delivery/deliverylogin.php"><i class="fas fa-truck"></i>&nbsp;Delivery</a>
+    </div>
+
+    <a href="admin/signin.php" class="admin-btn">Admin Panel</a>
+
+    <script>
+        function showOptions() {
+            const optionsContainer = document.getElementById('optionsContainer');
+            optionsContainer.style.display = optionsContainer.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+
+</body>
+</html>
