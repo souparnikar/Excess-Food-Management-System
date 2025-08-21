@@ -37,21 +37,36 @@ Railway Stations
 Donors or recipients can leave feedback on the donation or delivery experience.
 
 Database Structure (10 Tables):
+
 users – Stores donor information
+
 user_feedback – Collects feedback from users
+
 food_donations – Records donation details (food type, quantity, etc.)
+
 ngos – List and details of partnered NGOs
+
 orphanages – Details of registered orphanages
+
 bus_stands – Recipient info for food delivery to bus stands
+
 railway_stations – Info on railway station recipients
+
 recipients – Links donation with final destination (NGO/orphanage/etc.)
+
 admin – Admin credentials and privileges
+
 delivery_persons – Delivery staff details and their task status
+
 
 The database is normalized up to Third Normal Form (3NF) to reduce redundancy and maintain data consistency. Proper primary keys, foreign keys, and constraints are implemented to ensure relational integrity and accurate data flow between entities.
 
 Learning Outcomes:
+
 Real-world application of DBMS concepts like data modeling, normalization, and SQL.
+
 Understanding of relational database design and entity relationships.
+
 Full-stack development experience using PHP and MySQL.
+
 Insight into social impact through the redistribution of excess food.
